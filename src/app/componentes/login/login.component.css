@@ -1,0 +1,6 @@
+
+:hover ::ng-deep{
+  .p-inputtext p-component p-element p-password-input {
+    height: 12rem;
+  }
+}
