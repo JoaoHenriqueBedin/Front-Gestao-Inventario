@@ -6,6 +6,7 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 import { ImageModule } from 'primeng/image';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -28,8 +29,17 @@ export class LoginComponent {
   form: any;
 
 
+  constructor(
+    private router: Router
+  ) { }
+
+
+  ngOnInit(): void {
+  }
+
+
   register() {
-    alert('Tentativa de registro');
+    this.router.navigate(['/register']);
     }
 
 
