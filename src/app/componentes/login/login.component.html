@@ -1,7 +1,13 @@
-<div class="h-screen flex flex-column bg-black-alpha-10 justify-content-center align-items-center">
-  <p-card class="flex flex-column justify-content-center align-items-center ">
-    <div class="flex justify-content-center align-content-center ">
-      <p-image src="https://cdn-icons-png.flaticon.com/512/8639/8639414.png" alt="Image" width="150" />
+<div
+  class="h-screen flex flex-column bg-black-alpha-10 justify-content-center align-items-center"
+>
+  <p-card class="flex flex-column justify-content-center align-items-center">
+    <div class="flex justify-content-center align-content-center">
+      <p-image
+        src="https://cdn-icons-png.flaticon.com/512/8639/8639414.png"
+        alt="Image"
+        width="150"
+      />
     </div>
     <div class="flex justify-content-center mb-4">
       <h1>Ola! Bem-vindo!</h1>
@@ -11,7 +17,14 @@
         <div>
           <span class="p-float-label p-input-icon-right">
             <i class="pi pi-user"></i>
-            <input type="text" autocomplete="username" autofocus required pInputText [(ngModel)]="username" />
+            <input
+              type="text"
+              autocomplete="username"
+              autofocus
+              required
+              pInputText
+              [(ngModel)]="username"
+            />
             <label>Usuário</label>
           </span>
         </div>
@@ -19,16 +32,19 @@
 
       <div class="flex flex-1 justify-content-center">
         <p-floatLabel>
-          <p-password [(ngModel)]="password" [feedback]="false" [toggleMask]="true" />
+          <p-password
+            [(ngModel)]="password"
+            [feedback]="false"
+            [toggleMask]="true"
+          />
           <label for="password">Senha</label>
         </p-floatLabel>
       </div>
     </div>
     <div class="flex flex-1 justify-content-center align-items-center">
       <p-button label="Login" (click)="login()"></p-button>
-      <p class="p-4 "><b>OR</b></p>
+      <p class="p-4"><b>OR</b></p>
       <p-button label="Register" (click)="register()"></p-button>
     </div>
-
   </p-card>
 </div>
