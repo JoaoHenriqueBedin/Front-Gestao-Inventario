@@ -11,40 +11,34 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule,
-            ButtonModule,
-            PasswordModule,
-            InputTextModule,
-            FloatLabelModule,
-            ReactiveFormsModule,
-            CardModule,
-            ImageModule],
+  imports: [
+    FormsModule,
+    ButtonModule,
+    PasswordModule,
+    InputTextModule,
+    FloatLabelModule,
+    ReactiveFormsModule,
+    CardModule,
+    ImageModule,
+  ],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.css',
 })
 export class LoginComponent {
-
   username!: string;
   password!: string;
   form: any;
 
+  constructor(private router: Router) {}
 
-  constructor(
-    private router: Router
-  ) { }
-
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 
   register() {
     this.router.navigate(['/register']);
-    }
-
+  }
 
   login() {
-    alert('Tentaiva de login');
-    }
-
+    // falta logica para validar o login consumir API ..
+    this.router.navigate(['/home']);
+  }
 }

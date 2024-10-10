@@ -36,6 +36,7 @@ export class RegisterComponent {
     this.router.navigate(['/login'])
   }
   register() {
+    alert('Tentaiva de registro');
     throw new Error('Method not implemented.');
   }
   username: any;
