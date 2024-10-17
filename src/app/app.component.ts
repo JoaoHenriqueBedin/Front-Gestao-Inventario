@@ -6,7 +6,10 @@ import { MenuComponent } from './componentes/menu/menu.component';
 import { CommonModule } from '@angular/common';
 import { OnInit } from '@angular/core';
 import { HomeComponent } from './componentes/home/home.component';
-
+import { ProdutosComponent } from './componentes/produtos/produtos.component';
+import { FornecedoresComponent } from './componentes/fornecedores/fornecedores.component';
+import { PedidosComponent } from './componentes/pedidos/pedidos.component';
+import { TransacoesComponent } from './componentes/transacoes/transacoes.component';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +20,10 @@ import { HomeComponent } from './componentes/home/home.component';
     RegisterComponent,
     MenuComponent,
     HomeComponent,
+    ProdutosComponent,
+    FornecedoresComponent,
+    PedidosComponent,
+    TransacoesComponent,
     CommonModule,
   ],
   templateUrl: './app.component.html',
