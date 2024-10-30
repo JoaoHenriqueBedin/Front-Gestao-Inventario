@@ -1,1 +1,19 @@
-<h1 class="flex justify-content-center">Bem vindo!</h1>
+<div class="h-screen bg-black-alpha-20">
+  <p-card
+    class="flex flex-column justify-content-center align-items-center"
+    header="Olá!!"
+    subheader="Sistema de Gerenciamento de Inventários"
+    [style]="{ width: '360px' }"
+  >
+    <ng-template pTemplate="header">
+      <img
+        alt="Card"
+        src="https://media1.tenor.com/m/S5gJsF7DFdIAAAAd/bem-vindo.gif"
+      />
+    </ng-template>
+    <p>Nesta aplicação poderá cadastrar Clientes, Produtos, Fornecedores e muito mais! </p>
+    <ng-template pTemplate="footer">
+      <div class="flex gap-3 mt-1"></div>
+    </ng-template>
+  </p-card>
+</div>

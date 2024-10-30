@@ -1,38 +1,55 @@
-<div class="formgrid grid p-3">
-  <div class="field col-12 md:col-6">
-    <label for="nome">Nome</label>
-    <input
-      id="nome"
-      type="text"
-      pInputText
-      class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+<div class="h-screen bg-black-alpha-20">
+  <div class="top-0 right-0 absolute">
+    <p-messages [(value)]="messages" [enableService]="false" />
+  </div>
+  <p-card
+    class="flex flex-column justify-content-center align-items-center"
+    header="Cadastro De Produto"
+    [style]="{ width: '1000px' }"
+  >
+    <div class="field col-12 md:col-6">
+      <label for="nome">Nome</label>
+      <input
+        id="nome"
+        type="text"
+        pInputText
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+      />
+    </div>
+    <div class="field col-12 md:col-6">
+      <label for="preco">Preço</label>
+      <p-inputNumber
+        id="preco"
+        type="text"
+        mode="currency"
+        currency="BRL"
+        class="text-base text-color surface-overlay surface-border border-round appearance-none outline-none focus:border-primary w-full"
+      />
+    </div>
+    <div class="field col-12">
+      <label for="descricao">Descrição</label>
+      <textarea
+        id="descricao"
+        type="text"
+        pInputText
+        rows="4"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+      ></textarea>
+    </div>
+    <div class="field col-12 md:col-6">
+      <label for="quantidadeEstoque">Qtd. Estoque</label>
+      <input
+        id="quantidadeEstoque"
+        type="text"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+      />
+    </div>
+    <p-button
+      class="p-2"
+      label="Cadastrar"
+      icon="pi pi-check"
+      iconPos="right"
+      (onClick)="addMessages()"
     />
-  </div>
-  <div class="field col-12 md:col-3">
-    <label for="preco">Preço</label>
-    <input
-      id="preco"
-      type="text"
-      pInputText
-      class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
-    />
-  </div>
-  <div class="field col-12">
-    <label for="descricao">Descrição</label>
-    <textarea
-      id="descricao"
-      type="text"
-      pInputText
-      rows="4"
-      class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
-    ></textarea>
-  </div>
-  <div class="field col-12 md:col-3">
-    <label for="quantidadeEstoque">Qtd. Estoque</label>
-    <input
-      id="quantidadeEstoque"
-      type="text"
-      class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
-    />
-  </div>
+  </p-card>
 </div>
